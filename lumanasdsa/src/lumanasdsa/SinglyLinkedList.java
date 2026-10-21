@@ -47,8 +47,7 @@ void displaynodes(){
     
         if (current.next != null){
             System.out.println(current.next);
-        }else {
-            System.out.println("null");
+        0
         }
         current = current.next;
     }
