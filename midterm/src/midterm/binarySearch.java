@@ -1,13 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package midterm;
 
-/**
- *
- * @author admin
- */
+
 public class binarySearch {
+    public static int search(int[] arr, int values) {
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            
+            if (arr[mid] == values) {
+                return mid;
+            } else if (arr[mid] < values) {
+                left = mid + 1;
+            } else {
+                right = mid -1;
+            }          
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4, 5};
+        
+        int result = search(arr, 4);
+        
+        System.out.println(result);
+    }
     
 }
